@@ -1,7 +1,7 @@
 part of 'index.dart';
 
-class EnableGpsMsg extends StatelessWidget {
-  const EnableGpsMsg({
+class _EnableGpsMsg extends StatelessWidget {
+  const _EnableGpsMsg({
     Key? key,
   }) : super(key: key);
 

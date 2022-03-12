@@ -10,10 +10,10 @@ import 'package:maps_app/routes/routes.dart';
 
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setEnabledSystemUIMode(
-    SystemUiMode.manual,
-    overlays: [SystemUiOverlay.bottom],
-  );
+  // SystemChrome.setEnabledSystemUIMode(
+  //   SystemUiMode.manual,
+  //   overlays: [SystemUiOverlay.bottom],
+  // );
   await Preferences.init();
   setupLocator();
 
@@ -22,6 +22,9 @@ main() async {
       providers: [
         BlocProvider(
           create: (context) => ThemesBloc(),
+        ),
+        BlocProvider(
+          create: (context) => GpsBloc(),
         ),
       ],
       child: const MapsApp(),
